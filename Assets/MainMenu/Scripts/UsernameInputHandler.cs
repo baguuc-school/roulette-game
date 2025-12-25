@@ -1,21 +1,23 @@
-using System;
 using UnityEngine;
 
-public class UsernameInputHandler : MonoBehaviour
+namespace MainMenu
 {
-    public void HandleEndEdit(string input)
+    public class UsernameInputHandler : MonoBehaviour
     {
-        StateManager state = StateManager.GetInstance();
-        StateManager.GetInstance().Username = input;
-    }
-
-    public void HandleSelect(string selection)
-    {
-        StateManager state = StateManager.GetInstance();
-        
-        if(state.usernameInputField.image.color == Color.red)
+        public void HandleEndEdit(string input)
         {
-            state.usernameInputField.image.color = new Color(0.02f, 0.02f, 0.02f);
+            StateManager state = StateManager.GetInstance();
+            Shared.Context.Username = input;
+        }
+
+        public void HandleSelect(string selection)
+        {
+            StateManager state = StateManager.GetInstance();
+
+            if (state.usernameInputField.image.color == Color.red)
+            {
+                state.usernameInputField.image.color = new Color(0.02f, 0.02f, 0.02f);
+            }
         }
     }
 }

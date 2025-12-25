@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MainScene
 {
@@ -19,7 +17,5 @@ namespace MainScene
 
             return INSTANCE;
         }
-
-        public string Username { get; set; } = "";
     }
 }

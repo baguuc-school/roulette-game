@@ -18,12 +18,7 @@ namespace MainScene
 
         public void Start()
         {
-            //string[] entries = new string[]
-            //{
-            //    "Podstawowa",
-            //    "Lepsza",
-            //    "Dojebana"
-            //};
+            Debug.Log(Shared.Context.Username);
             List<RouletteRecord> records = Fetch();
 
             int currY = 100;
@@ -60,30 +55,6 @@ namespace MainScene
                 Debug.LogError($"Request error: {e.Message}");
                 return new List<RouletteRecord>();
             }
-
-            //using (UnityWebRequest webRequest = UnityWebRequest.Get($"{StateManager.GetInstance().BASE_API_URL}/Roulettes"))
-            //{
-            //    // Send the request
-            //    webRequest.SendWebRequest();
-
-            //    if (webRequest.result == UnityWebRequest.Result.ConnectionError ||
-            //        webRequest.result == UnityWebRequest.Result.ProtocolError)
-            //    {
-            //        Debug.LogError($"Error: {webRequest.error}");
-
-            //        return new List<RouletteRecord>();
-            //    }
-            //    else
-            //    {
-            //        // Success - parse the response
-            //        string response = webRequest.downloadHandler.text;
-
-            //        // If expecting JSON, you can deserialize it
-            //        List<RouletteRecord> data = JsonUtility.FromJson<List<RouletteRecord>>(response);
-
-            //        return data;
-            //    }
-            //}
         }
     }
 

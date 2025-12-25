@@ -2,24 +2,26 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StateManager : MonoBehaviour
+namespace MainMenu
 {
-    private static StateManager INSTANCE;
-
-    public TMP_InputField usernameInputField;
-    public Button startButton;
-    public Button exitButton;
-
-    public static StateManager GetInstance()
+    public class StateManager : MonoBehaviour
     {
-        if(!INSTANCE)
-        {
-            var gameObject = GameObject.FindGameObjectWithTag("UIManager");
-            INSTANCE = gameObject.GetComponent<StateManager>();
-        }
+        private static StateManager INSTANCE;
 
-        return INSTANCE;
+        public TMP_InputField usernameInputField;
+        public Button startButton;
+        public Button exitButton;
+
+        public static StateManager GetInstance()
+        {
+            if (!INSTANCE)
+            {
+                var gameObject = GameObject.FindGameObjectWithTag("UIManager");
+                INSTANCE = gameObject.GetComponent<StateManager>();
+            }
+
+            return INSTANCE;
+        }
     }
 
-    public string Username { get; set; } = "";
 }

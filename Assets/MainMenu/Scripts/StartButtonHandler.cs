@@ -1,20 +1,22 @@
 using UnityEngine;
 
-public class StartButtonHandler : MonoBehaviour
+namespace MainMenu
 {
-    public void HandleClick()
+    public class StartButtonHandler : MonoBehaviour
     {
-        StateManager stateManager = StateManager.GetInstance();
-
-        if (stateManager.Username.Length == 0)
+        public void HandleClick()
         {
-            Color initialColor = stateManager.usernameInputField.image.color;
-            stateManager.usernameInputField.image.color = Color.red;
+            StateManager stateManager = StateManager.GetInstance();
 
-            return;
-        } else
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+            if (Shared.Context.Username.Length == 0)
+            {
+                Color initialColor = stateManager.usernameInputField.image.color;
+                stateManager.usernameInputField.image.color = Color.red;
+            }
+            else
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+            }
         }
     }
 }

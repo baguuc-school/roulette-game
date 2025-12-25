@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class ExitButtonHandler : MonoBehaviour
+namespace MainMenu
 {
-    public void HandleClick()
+    public class ExitButtonHandler : MonoBehaviour
     {
-        Application.Quit();
+        public void HandleClick()
+        {
+            Application.Quit();
+        }
     }
 }
