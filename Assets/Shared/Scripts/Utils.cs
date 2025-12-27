@@ -6,6 +6,15 @@ namespace Shared
 {
     public static class Utils
     {
+        public static void Exit()
+        {
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit();
+            #endif
+        }
+
         public static T WeightedPick<T>(IEnumerable<T> seq, Random random) where T : IWeightedItem
         {
             T[] pool = seq.OrderBy(i => i.Value).ToArray();

@@ -130,9 +130,10 @@ GameObject:
   - component: {fileID: 175687071}
   - component: {fileID: 175687072}
   - component: {fileID: 175687073}
+  - component: {fileID: 175687074}
   m_Layer: 0
-  m_Name: UIManager
-  m_TagString: UIManager
+  m_Name: LevelManager
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,12 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c232614bb3dc74a84322dc246ee293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainScene2.FetchRoulettes
-  panelTextContainers:
-  - {fileID: 2032022228}
-  - {fileID: 947623466}
-  - {fileID: 921883859}
-  - {fileID: 1268813533}
-  - {fileID: 1245269314}
 --- !u!114 &175687073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +177,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d0a86fbd4ee9b45b48b7c53ff6cf2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButtonHandler
-  panelTextContainers:
+--- !u!114 &175687074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175687070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0b0ddb2dcc9c2458e5377cc4f7d116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainScene.Core
+  TextContainers:
   - {fileID: 2032022228}
   - {fileID: 947623466}
   - {fileID: 921883859}
@@ -1252,7 +1259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d0a86fbd4ee9b45b48b7c53ff6cf2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButtonHandler
-  panelTextContainers: []
 --- !u!1 &1616643178
 GameObject:
   m_ObjectHideFlags: 0
