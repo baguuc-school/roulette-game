@@ -1,41 +1,26 @@
 using Newtonsoft.Json;
+using Shared;
 using Shared.Models;
 using System.Collections.Generic;
 using System.Net.Http;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace ListMenu
 {
     public class FetchRoulettes : MonoBehaviour
     {
-        public GameObject listButtonPrefab;
-        public GameObject canvas;
+        // prywatny stan
+        private Core core => Core.GetInstance();
 
         public void Start()
         {
-            Debug.Log(Shared.Context.Username);
-            List<RouletteWithoutItems> records = Fetch();
+            List<RouletteWithoutItems> records = FetchRouletteList();
+            Context.RouletteList = records;
 
-            int currY = 100;
-
-            foreach (RouletteWithoutItems entry in records)
-            {
-                GameObject button = Instantiate(listButtonPrefab, transform);
-                button.GetComponentInChildren<TMPro.TMP_Text>().text = entry.name;
-                button.GetComponent<Button>().onClick.AddListener(() => {
-                    Shared.Context.SelectedRouletteId = entry.Id;
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
-                });
-
-                button.transform.localPosition = new Vector3(40, currY, 0);
-                button.transform.SetParent(canvas.transform, true);
-
-                currY -= 60;
-            }
+            core.RenderRouletteList();
         }
 
-        private List<RouletteWithoutItems> Fetch()
+        private List<RouletteWithoutItems> FetchRouletteList()
         {
             try
             {

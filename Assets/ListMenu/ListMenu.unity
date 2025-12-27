@@ -401,8 +401,8 @@ GameObject:
   - component: {fileID: 722302879}
   - component: {fileID: 722302880}
   m_Layer: 0
-  m_Name: UIManager
-  m_TagString: UIManager
+  m_Name: LevelManager
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,8 +434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3510bf763a092744b86cf6684efb247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FetchRoulettes
-  listButtonPrefab: {fileID: 5838600279402316307, guid: 7739fda929ca0714b823d026691aba68, type: 3}
-  canvas: {fileID: 421981885}
 --- !u!114 &722302880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982a646729b853b4888828dfff43282d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainScene.StateManager
-  BASE_API_URL: https://localhost:5000
+  listButtonPrefab: {fileID: 5838600279402316307, guid: 7739fda929ca0714b823d026691aba68, type: 3}
+  canvas: {fileID: 421981885}
 --- !u!1 &1348398909
 GameObject:
   m_ObjectHideFlags: 0
