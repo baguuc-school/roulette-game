@@ -583,7 +583,6 @@ GameObject:
   - component: {fileID: 722302878}
   - component: {fileID: 722302879}
   - component: {fileID: 722302881}
-  - component: {fileID: 722302882}
   - component: {fileID: 722302880}
   m_Layer: 0
   m_Name: LevelManager
@@ -645,18 +644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a354e899cdc9d4786679d4cf48b9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ListMenu.BackButtonHandler
---- !u!114 &722302882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722302877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8c41a05f44894459401996818f9b75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Shared.Bootstrap
 --- !u!1 &1259241102
 GameObject:
   m_ObjectHideFlags: 0

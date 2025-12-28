@@ -31,7 +31,7 @@ namespace ListMenu
             try
             {
                 HttpClient client = new HttpClient();
-                string response = client.GetStringAsync($"{Context.BASE_API_URL}/Roulettes").Result;
+                string response = client.GetStringAsync($"{Context.BaseApiUrl}/Roulettes").Result;
 
                 List<RouletteWithoutItems> records = JsonConvert.DeserializeObject<List<RouletteWithoutItems>>(response);
                 return records;

@@ -59,7 +59,7 @@ namespace MainScene
             try
             {
                 HttpClient client = new HttpClient();
-                string response = client.GetStringAsync($"{Context.BASE_API_URL}/Roulettes/Details/{id}").Result;
+                string response = client.GetStringAsync($"{Context.BaseApiUrl}/Roulettes/Details/{id}").Result;
 
                 Roulette record = JsonConvert.DeserializeObject<Roulette>(response);
                 return record;

@@ -70,7 +70,7 @@ namespace MainScene
                 bodyContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
                 var response = client
-                    .PostAsync($"{Context.BASE_API_URL}/Rewards", bodyContent)
+                    .PostAsync($"{Context.BaseApiUrl}/Rewards", bodyContent)
                     .Result;
 
                 string responseBody = response

@@ -8,6 +8,7 @@ namespace MainMenu
     {
         // referencje z edytora
         public TMP_InputField usernameInputField;
+        public TMP_InputField apiUrlInputField;
         public Button startButton;
         public Button exitButton;
 
@@ -37,7 +38,23 @@ namespace MainMenu
             }
             else if(!enabled && usernameInputField.image.color == Color.red)
             {
-                usernameInputField.image.color = new Color(0.02f, 0.02f, 0.02f);
+                usernameInputField.image.color = new Color(0.0274509803921569f, 0.0274509803921569f, 0.0274509803921569f);
+            }
+        }
+
+        /// <summary>
+        /// W³¹cza lub wy³¹cza alert koloru czerwonego na polu wprowadzania URL API.
+        /// </summary>
+        /// <param name="enabled">Oczekiwany stan</param>
+        public void ToggleApiUrlInputAlert(bool enabled)
+        {
+            if (enabled && apiUrlInputField.image.color != Color.red)
+            {
+                apiUrlInputField.image.color = Color.red;
+            }
+            else if (!enabled && apiUrlInputField.image.color == Color.red)
+            {
+                apiUrlInputField.image.color = new Color(0.0274509803921569f, 0.0274509803921569f, 0.0274509803921569f);
             }
         }
     }
